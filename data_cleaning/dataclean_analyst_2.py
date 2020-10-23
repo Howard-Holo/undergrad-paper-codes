@@ -9,10 +9,10 @@ import multiprocessing
 
 Z_ppf = scipy.stats.norm.ppf(0.001)
 
-# 删除array里重复项的函数
+# 删除array里重复项的函数，并排序
 def deleteDuplicatedElementFromList(listA):
     # return list(set(listA))
-    return sorted(set(listA), key=listA.index)
+    return sorted(set(listA), key = listA.index)
 
 # 为判定时间先后，对日期str进行重新编码
 def change_date_form(da):
@@ -182,7 +182,11 @@ def launch_process(x):
         print("Process No.", x, "On", stock_list[i], count, " / ", int(num_totaltask/num_process), time.ctime())
         working_program(stock_list[i])
 
-# 主程序。开启并行进程。
+        
+        
+        
+        
+# "主程序"开启并行进程。
 ts = []
 for j in range(1, num_process + 1):
     t = multiprocessing.Process(target=launch_process, args=(j,))  # 创建第j个进程，进程启动函数是launch_process
