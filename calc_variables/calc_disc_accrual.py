@@ -21,7 +21,7 @@ da = np.array(db)
 
 TA_temp, d_AR_temp, d_sale_temp = [], [], []
 
-# 国泰安的数据还算比较工整，就不做排序了
+# GTA的数据还算比较工整，就不做排序了
 for line in range(len(da)):
     if(line == len(da) - 1):
         TA_temp.append(None)
