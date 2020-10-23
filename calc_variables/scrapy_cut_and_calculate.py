@@ -21,8 +21,7 @@ def emotionAnalysis(dict_pyra, text_a):
             if (pyra_row == 0):
                 freq = 0  # not exist in pyramid dict...
             else:
-                freq = dict_pyra[pyra_row][1:].count(
-                    i)  # locate the row by pyra_row, and count the freq of the word in the rest of the row
+                freq = dict_pyra[pyra_row][1:].count(i)  # locate the row by pyra_row, and count the freq of the word in the rest of the row
 
             sum_f += freq
             # print(i, freq, last_head, pyra_row)
@@ -46,8 +45,7 @@ def emotionAnalysis(dict_pyra, text_a):
                 # print(i, freq, last_head, pyra_row)
                 continue
             else:
-                freq = dict_pyra[pyra_row][1:].count(
-                    i)  # locate the row by pyra_row, and count the freq of the word in the rest of the row
+                freq = dict_pyra[pyra_row][1:].count(i)  # locate the row by pyra_row, and count the freq of the word in the rest of the row
                 sum_f += freq
                 # print(i, freq, last_head, pyra_row)
     # output
@@ -195,7 +193,7 @@ def identifyTitle(task_stock):
 # =====================================================================================================================
 
 # 获取该目录下所有文件，存入列表中
-path_in = '/Users/exusiai/PycharmProjects/untitled/Annual Repo'
+path_in = '~~//PycharmProjects/untitled/Annual Repo'
 folderList = os.listdir(path_in)
 folderList = sorted(folderList)
 # print(folderList)
